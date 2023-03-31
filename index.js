@@ -42,8 +42,30 @@ function login(username, password){
 
 }
 
+function register(newusername, newpassword, newname , newemail){
+    //todo: check if username exist
+    let matched = user1.find(Element=>
+        Element.username == newusername
+    )
+    if(matched){
+        console.log("Username exist");
+    }else{
+            user1.push({
+                username: newusername,
+                password: newpassword,
+                name: newname,
+                email: newemail
+            })
+            console.log("push successfully");
+        }
+}
+
 // try to login
 // login_all()
 
-console.log(login("yc27", "12345678"));
-console.log(login("yc27", "2343"));
+// console.log(login("yc27", "12345678"));
+// console.log(login("yc27", "2343"));
+
+register("yc27", "ggggg", "Hadina", "hadina@gmail.com")
+
+// login_all()
